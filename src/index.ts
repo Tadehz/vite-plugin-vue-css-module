@@ -80,7 +80,7 @@ export default function vueCssModule(userOptions: Partial<PluginOptions> = {}): 
         }
       }
     },
-    async handleHotUpdate({ file, read }) {
+    async hotUpdate({ file, read }) {
       if (file.endsWith('.vue')) {
         const cached = cache.get(file)
         if (cached) {
